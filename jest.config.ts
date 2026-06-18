@@ -6,6 +6,12 @@ const config: Config = {
   roots: ["<rootDir>/src"],
   testMatch: ["**/*.test.ts"],
   clearMocks: true,
+  collectCoverageFrom: [
+    "src/**/*.ts",
+    "!src/**/*.test.ts",
+    "!src/database/migrate.ts",
+    "!src/server.ts",
+  ],
 };
 
 export default config;
